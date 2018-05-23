@@ -1,0 +1,36 @@
+﻿
+@model IEnumerable<Hobby>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="page-header">Hobby</h2>
+<div class="btn-group btn-group-justified well">
+    <a class="btn btn-danger" href="~/hobby/new">
+        <i class="fa fa-plus"></i> Nuevo registro
+    </a>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th style="width:40px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>
+                  @m.Name
+                </td>
+                <td>
+                    <a class="btn btn-xs btn-danger btn-block" href="~/hobby/deleted/@m.Id">
+                        <i class="fa fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

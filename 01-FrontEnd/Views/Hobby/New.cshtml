@@ -1,0 +1,19 @@
+﻿@model Hobby
+
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>New</h2>
+@using (@Html.BeginForm("Create", "Hobby", FormMethod.Post)) {
+
+    <div class="form-group">
+        <label>Nombre</label>
+        @Html.TextBoxFor(x => x.Name)
+    </div>
+
+    <button class="btn btn-success" type="submit">Save</button>
+
+
+}
+
