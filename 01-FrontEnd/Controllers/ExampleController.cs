@@ -14,6 +14,12 @@ namespace FrontEnd.Controllers
         private readonly IStudentService _studentService = DependecyFactory.GetInstance<IStudentService>();
         private readonly ICourseService _courseService = DependecyFactory.GetInstance<ICourseService>();
 
+
+        public ActionResult prueba()
+        {
+            return View();
+        }
+
         public ActionResult Pruebav()
         {
             return View();
